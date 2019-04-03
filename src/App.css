@@ -1,0 +1,214 @@
+
+:root {
+  --title-font: 900 1rem 'Source Sans Pro';
+  --body-font: 400 1rem Sintony;
+}
+
+/*Photo by Brooke Lark on Unsplash*/
+
+
+.white-out {
+  position: absolute;
+  background: white;
+  z-index: 5;
+  height: 100%;
+  width: 100
+}
+
+.picture {
+  background-image: url("./images/brooke-lark-230140-unsplash.jpg");
+  background-size: cover;
+  background-position: 0 -50px;
+  background-repeat: no-repeat;
+  height: 35vh;
+  border-bottom: 5px solid rgb(206, 59, 70)
+}
+
+body {
+  background-color: rgb(240, 244, 247);
+  color: rgb(61, 64, 78);
+}
+
+h1, i { 
+  font: var(--title-font);
+  font-size: 3rem;
+  display: inline-block;
+  color: rgb(224, 77, 86)
+}
+
+@media (max-width: 600px) {
+  .picture {
+    height: 30vh;
+    background-position: top;
+  }
+  .Title h1, .Title i {
+    background-color: rgba(255, 255, 255, 0.753);
+    padding: 10px;
+    font-size: 1.5rem;
+    height: 2rem;
+  }
+  i {
+      padding: 10px;
+      font-size: 1.5rem;
+  }
+
+}
+
+.btns {
+  display: flex;
+  grid-area: buttons;
+}
+
+
+h2 {
+  font: var(--title-font);
+  font-size: 1.5rem;
+}
+
+li, p, input, select, textarea {
+  font: var(--body-font);
+}
+
+button {
+  font: var(--title-font);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  
+}
+
+li {
+  list-style-type: circle;
+}
+
+input, select, textarea {
+  background-color: rgb(240, 240, 240);
+  border: 1px solid darkblue;
+}
+
+
+select {
+  padding: 10px;
+}
+
+
+.Title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SelectRecipe{
+  display: flex;
+  justify-content: center;
+}
+
+.DisplayRecipeEdit {
+   grid-area: title;
+}
+
+.DisplayRecipe button {
+  display: inline-block;
+  background: none;
+  border: none;
+}
+
+.DisplayRecipe button i {
+  font-size: 1.3rem;
+  margin-left: 5px;
+}
+
+.DisplayRecipe button:hover i {
+  color: salmon;
+}
+
+.DisplayRecipe {
+  display: grid;
+  grid-gap: 1vw;
+  grid-template: 
+    "    .         title          buttons  " 1fr 
+    "ingredients instructions        .     " 10fr
+    / 1fr 1fr 1fr;
+  margin: 50px;
+}
+
+@media (max-width: 550px) {
+  .DisplayRecipe {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template:
+      "title" 0.3fr
+      "buttons" 0.1fr
+      "ingredients" 1.6fr
+      "instructions" 2fr;
+      
+    margin: 50px;
+  }
+  .Ingredients h2 {
+    text-align: center;
+  }
+  .btns {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.DisplayRecipe h2 {
+  display: inline-block;
+}
+
+.RecipeName {
+  width: 100%;
+  grid-area: title;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+.Ingredients {
+  display: flex;
+  flex-direction: column;
+  grid-area: ingredients;
+}
+
+.Instructions {
+  grid-area: instructions;
+}
+
+.Instructions h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#add-recipe {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;  
+}
+
+.AddRecipe__container {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 10vh;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background: salmon
+
+ 
+}
+
+.AddRecipe {
+  display: flex;
+  justify-content: center;
+}
+.AddRecipe__toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+ }
